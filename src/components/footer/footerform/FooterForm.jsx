@@ -275,7 +275,7 @@ const FooterForm = () => {
 
                 ?    <img src={require('../../../assets/gold.png')} draggable={false}/>
 
-                :    <img src={require('../../../assets/mobile_gold.png')} draggable={false}/>
+                :    <img src={require('../../../assets/mobile_gold.png')} draggable={false} className={s.safe}/>
 
             }
 

@@ -298,8 +298,9 @@ span {
     margin-bottom: 12px;
     margin-top: 16px;
   }
-  img {
+  .safe {
     margin-top: auto;
+    transform: translateX(5%);
   }
 }
 
