@@ -1,7 +1,7 @@
 import React from 'react';
 import s from './Main.module.scss'
 import {useMediaQuery} from "react-responsive";
-import MainMobile from "./MainMobile";
+
 
 const Main = () => {
     const isMobile = useMediaQuery({maxWidth: 765});

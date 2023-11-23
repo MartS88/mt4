@@ -212,7 +212,76 @@ header .line_block .line_mid_block .mid_block_div {
   gap: 20px;
   background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%), linear-gradient(241.16deg, #1F1C10 3.83%, #503D0B 47.84%, #1F1C10 96.7%);
 }
+header .line_block .line_mid_block .mid_block_div .investment_line {
+  width: 756px;
+  height: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
+}
+header .line_block .line_mid_block .mid_block_div .investment_line .slider_prices {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+header .line_block .line_mid_block .mid_block_div .investment_line .slider_prices .slider_price {
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  color: #5E6B74;
+}
+header .line_block .line_mid_block .mid_block_div .investment_line .slider_prices .slider_price2 {
+  color: #FFFFFF;
+}
+header .line_block .line_mid_block .mid_block_div .investment_line .slider {
+  transform: translateY(100%);
+  width: 100%;
+  -webkit-appearance: none;
+  -webkit-transition: 0.2s;
+  border-radius: 20px;
+  height: 20px;
+  background: #F0A719;
+  outline: none;
+  position: relative;
+}
+header .line_block .line_mid_block .mid_block_div .investment_line .slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  transition: 0.1s;
+}
+header .line_block .line_mid_block .mid_block_div .investment_line .slider::-moz-range-thumb {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  transition: 0.1s;
+}
+header .line_block .line_mid_block .mid_block_div .investment_line .slider::-webkit-slider-thumb:hover,
+header .line_block .line_mid_block .mid_block_div .investment_line .slider::-webkit-slider-thumb:active {
+  width: 39px;
+  height: 39px;
+  cursor: pointer;
+}
+header .line_block .line_mid_block .mid_block_div .investment_line .sliderValue {
+  transform: translateY(125%);
+  top: 0;
+  left: 0;
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  color: #FFFFFF;
+}
 header .line_block .line_mid_block .mid_block_div .mid_block_div_investment {
+  transform: translateY(30%);
   margin-right: auto;
   font-family: "Prompt";
   font-weight: 500;
@@ -222,6 +291,7 @@ header .line_block .line_mid_block .mid_block_div .mid_block_div_investment {
   color: #FFFFFF;
 }
 header .line_block .line_mid_block .mid_block_div .mid_block_div_profit {
+  transform: translateY(30%);
   font-family: "Prompt";
   font-weight: 500;
   font-size: 16px;
@@ -480,8 +550,14 @@ header .line_block .start_trading_now_button {
     gap: 20px;
     background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%), linear-gradient(241.16deg, #1F1C10 3.83%, #503D0B 47.84%, #1F1C10 96.7%);
   }
+  header .line_block .line_mid_block .mid_block_div .investment_line {
+    width: 296px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
   header .line_block .line_mid_block .mid_block_div .mid_block_div_investment {
-    transform: translateX(-10%);
+    transform: translate(-10%, 50%);
     margin-right: auto;
     font-family: "Prompt";
     font-weight: 500;

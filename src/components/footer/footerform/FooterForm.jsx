@@ -139,7 +139,9 @@ const FooterForm = () => {
             ) : null}
 
 
-            <form onSubmit={submitHandler}>
+            <form
+                id='scrollTarget'
+                onSubmit={submitHandler}>
 
                 <h3 className={s.footer_form_title}>
                     Enjoy Unlimited Trading Opportunities with MTrading

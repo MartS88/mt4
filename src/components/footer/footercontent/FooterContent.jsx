@@ -6,7 +6,6 @@ const FooterContent = () => {
         <div className={s.footer_block}>
 
 
-
             <div className={s.first}>
 
                 <div className={s.first_div}>
@@ -76,8 +75,6 @@ const FooterContent = () => {
 
                 </ul>
             </div>
-
-
 
                 <p className={s.footer_about}>
                     Address: First Floor, First Saint Vincent Bank Ltd. Building, James Street, Kingstown,

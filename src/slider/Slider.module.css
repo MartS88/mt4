@@ -1,0 +1,75 @@
+.input_line {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.input_line .slider {
+  transform: translateY(100%);
+  width: 100%;
+  -webkit-appearance: none;
+  -webkit-transition: 0.2s;
+  border-radius: 20px;
+  height: 20px;
+  background: #F0A719;
+  outline: none;
+  position: relative;
+}
+.input_line .slider::before {
+  position: absolute;
+  content: "$250";
+  top: 30px;
+  left: 10px;
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  color: #5E6B74;
+}
+.input_line .slider::after {
+  position: absolute;
+  content: "$2500";
+  top: 30px;
+  left: 94%;
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  color: #5E6B74;
+}
+.input_line .slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  transition: 0.1s;
+}
+.input_line .slider::-moz-range-thumb {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  transition: 0.1s;
+}
+.input_line .slider::-webkit-slider-thumb:hover,
+.input_line .slider::-webkit-slider-thumb:active {
+  width: 39px;
+  height: 39px;
+  cursor: pointer;
+}
+.input_line .sliderValue {
+  top: 0;
+  left: 0;
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  color: #FFFFFF;
+}
+
+/*# sourceMappingURL=Slider.module.css.map */

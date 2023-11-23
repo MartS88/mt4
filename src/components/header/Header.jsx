@@ -1,22 +1,50 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import s from './Header.module.scss'
 import Logo from "./logo/Logo";
 import {useMediaQuery} from "react-responsive";
 import MobileLogo from "./mobilelogo/MobileLogo";
 
+
 const Header = () => {
+
     const isMobile = useMediaQuery({maxWidth: 765});
+
+    const scrollToElement = () => {
+        const element = document.getElementById('scrollTarget');
+        element.scrollIntoView({
+            behavior: 'smooth'
+        });
+    }
+
+    const [sliderValue, setSliderValue] = useState(250);
+    const [profit, setProfit] = useState()
+    const handleChange = (e) => {
+        const value = parseInt(e.target.value, 10);
+        setSliderValue(value);
+        setProfit(value * 1.25)
+    };
+
+    const calculateBackgroundColor = () => {
+        const percentage = (sliderValue - 250) / (25000 - 250) * 100;
+        const color = `linear-gradient(to right, #F0A719 ${percentage}%, #fff ${percentage}%)`;
+        return { background: color };
+
+    };
+
 
     return (
         <header>
 
             <div className={s.header_menu_block}>
 
-                {!isMobile ? <Logo /> : <MobileLogo />}
+                {!isMobile ? <Logo/> : <MobileLogo/>}
 
 
                 <div className={s.button_block}>
-                    <button className={s.open_account}>Open account</button>
+                    <button
+                        onClick={scrollToElement}
+                        className={s.open_account}>Open account
+                    </button>
                 </div>
 
             </div>
@@ -32,7 +60,9 @@ const Header = () => {
                             Maximize profits with a broker offering the most favorable terms
                     </span>
 
-                    <button className={s.trade_gold_button}>
+                    <button
+                        onClick={scrollToElement}
+                        className={s.trade_gold_button}>
                         Trade gold
                     </button>
                 </div>
@@ -90,33 +120,42 @@ const Header = () => {
                     <div className={s.mid_block_div}>
                         <span className={s.mid_block_div_investment}>You investment</span>
 
-                        {!isMobile
 
-                            ?    <img src={require('../../assets/line.png')} draggable={false}/>
+                        <div className={s.investment_line}>
+                            <input
+                                className={s.slider}
+                                type="range"
+                                min="250"
+                                max="25000"
+                                step="250"
+                                value={sliderValue}
+                                onChange={handleChange}
+                                style={calculateBackgroundColor()}
+                            />
+                            <div className={s.slider_prices}>
+                                <span className={s.slider_price}>$250</span>
+                                <span className={s.slider_price2}>${sliderValue}</span>
+                                <span className={s.slider_price}>$25000</span>
+                            </div>
 
-                            :    <img src={require('../../assets/mobile_line.png')} draggable={false}/>
-                        }
+                        </div>
+
 
                     </div>
 
                     <div className={s.mid_block_div}>
                         <span className={s.mid_block_div_profit}>You Profit</span>
-                        <span className={s.mid_block_div_money}>$127.000</span>
+                        <span className={s.mid_block_div_money}>${profit}</span>
                     </div>
                 </div>
 
-                <button className={s.start_trading_now_button}>
+                <button
+                    onClick={scrollToElement}
+                    className={s.start_trading_now_button}>
                     Start trading now
                 </button>
             </div>
 
-            {/*    </>*/}
-            {/*) : (*/}
-            {/*    <>*/}
-
-            {/*        <HeaderMobile/>*/}
-            {/*    </>*/}
-            {/*)}*/}
         </header>
     );
 };

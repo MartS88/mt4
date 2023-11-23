@@ -37,9 +37,6 @@ const Popup = ({submitHandler, email}) => {
                         Close
                     </button>
 
-                    <button>
-                        Login
-                    </button>
                 </div>
             </div>
 
