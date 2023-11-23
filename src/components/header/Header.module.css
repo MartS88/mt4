@@ -14,9 +14,9 @@ header::after {
   width: 855px;
   height: 632px;
   content: "";
-  top: 0%;
+  top: 0;
   left: 53%;
-  transform: translate(-53%, 12%);
+  transform: translate(-53%, 20%);
   z-index: 1;
   pointer-events: none;
 }
