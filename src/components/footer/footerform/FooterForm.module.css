@@ -9,8 +9,8 @@ img {
   height: 100vh;
   justify-content: center;
   left: 0;
-  position: fixed;
   top: 0;
+  position: fixed;
   width: 100%;
   z-index: 5;
 }
@@ -19,15 +19,12 @@ img {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  height: 612px;
+  height: 642px;
   border-radius: 32px;
-  background: linear-gradient(83.11deg, rgba(138, 139, 142, 0.1) 3.83%, rgba(239, 239, 239, 0.1) 59.24%, rgba(84, 85, 88, 0.1) 77.71%);
+  background: linear-gradient(79.42deg, #070708 3.77%, #2A1F02 78.83%, #0C0015 95.37%);
   padding: 32px;
   overflow: hidden;
   margin-bottom: 120px;
-}
-.form_back img {
-  transform: translateX(32px);
 }
 .form_back form {
   padding-top: 32px;
@@ -38,7 +35,7 @@ img {
   flex-direction: column;
   gap: 24px;
 }
-.form_back form h2 {
+.form_back form .footer_form_title {
   width: 646px;
   height: 52px;
   font-family: "Prompt";
@@ -113,8 +110,8 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 7.59px;
-  background: #8A24F3;
+  gap: 4px;
+  background: #F0A719;
   font-family: "Roboto";
   font-weight: 500;
   font-size: 16px;
@@ -150,15 +147,15 @@ span {
 }
 
 .button_disabled {
-  width: 646px;
+  wwidth: 646px;
   height: 56px;
   border-radius: 8px;
   padding: 16px 0px 16px 0px;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 7.59px;
-  background: #8A24F3;
+  gap: 4px;
+  background: #F0A719;
   font-family: "Roboto";
   font-weight: 500;
   font-size: 16px;
@@ -176,7 +173,8 @@ span {
     height: auto;
     gap: 0px;
     padding: 15px;
-    margin-bottom: 40px;
+    margin-bottom: 0px;
+    background: linear-gradient(20.52deg, #070708 0.72%, #2A1F02 30.58%, #070708 58.64%);
   }
   .form_back form {
     height: 800px;
@@ -189,15 +187,17 @@ span {
     gap: 0px;
     border-radius: 16px;
   }
-  .form_back form h2 {
+  .form_back form .footer_form_title {
     width: 296px;
-    height: 160px;
+    height: auto;
     font-family: "Prompt";
     font-weight: 500;
     font-size: 28px;
     line-height: 40px;
-    letter-spacing: 0.27px;
-    margin-bottom: 12px;
+    letter-spacing: 0.4px;
+    color: #FFFFFF;
+    margin-bottom: 40px;
+    text-align: center;
   }
   .form_back form .inputs_block {
     width: 296px;
@@ -262,7 +262,7 @@ span {
     justify-content: center;
     align-items: center;
     gap: 4px;
-    background: #8A24F3;
+    background: #F0A719;
     margin-bottom: 12px;
     margin-top: 16px;
   }
@@ -293,7 +293,6 @@ span {
     justify-content: center;
     align-items: center;
     gap: 4px;
-    background: #8A24F3;
     border: none;
     cursor: wait !important;
     margin-bottom: 12px;
@@ -301,7 +300,6 @@ span {
   }
   img {
     margin-top: auto;
-    transform: translateY(17px) !important;
   }
 }
 

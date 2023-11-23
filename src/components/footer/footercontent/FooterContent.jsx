@@ -77,9 +77,9 @@ const FooterContent = () => {
                 </ul>
             </div>
 
-            <div className={s.second}>
 
-                <p>
+
+                <p className={s.footer_about}>
                     Address: First Floor, First Saint Vincent Bank Ltd. Building, James Street, Kingstown,
                     St.
                     Vincent and the Grenadines. MTrading (ServiceComsvg Ltd.) incorporated under registered
@@ -107,7 +107,7 @@ const FooterContent = () => {
                     to our
                     FAQ section.
                 </p>
-            </div>
+
         </div>
     );
 };

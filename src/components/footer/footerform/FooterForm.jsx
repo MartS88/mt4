@@ -3,6 +3,7 @@ import s from './FooterForm.module.scss'
 import {isValidNumber, parsePhoneNumber} from "libphonenumber-js";
 import PhoneInput from "react-phone-input-2";
 import Popup from "../../popup/Popup";
+import {useMediaQuery} from "react-responsive";
 const FooterForm = () => {
 
     const [firstName, setFirstName] = useState('')
@@ -122,13 +123,11 @@ const FooterForm = () => {
 
     useEffect(() => {
         if (popUpIsActive) {
-
-                window.scrollTo({ top: 300, behavior: 'smooth' });
-
-
+                window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     }, [popUpIsActive]);
 
+    const isMobile = useMediaQuery({maxWidth: 765});
 
     return (
         <div className={s.form_back}>
@@ -142,12 +141,10 @@ const FooterForm = () => {
 
             <form onSubmit={submitHandler}>
 
-                <h2>
-                    Enjoy Unlimited Trading
+                <h3 className={s.footer_form_title}>
+                    Enjoy Unlimited Trading Opportunities with MTrading
 
-                    Opportunities with MTrading
-
-                </h2>
+                </h3>
 
                 <div className={s.inputs_block}>
 
@@ -272,7 +269,15 @@ const FooterForm = () => {
                 </p>
             </form>
 
-            <img src={require('../../../assets/safe.png')} width={478.98} height={455.04} draggable={false}/>
+            {!isMobile
+
+                ?    <img src={require('../../../assets/gold.png')} draggable={false}/>
+
+                :    <img src={require('../../../assets/mobile_gold.png')} draggable={false}/>
+
+            }
+
+
         </div>
     );
 };

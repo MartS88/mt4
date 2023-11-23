@@ -6,18 +6,21 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 40px;
 }
 header::after {
   position: absolute;
   background: url("../../assets/background.png") center/cover no-repeat;
-  width: 1920px;
-  height: 1180px;
-  top: 0px;
-  left: 0px;
+  width: 855px;
+  height: 632px;
   content: "";
+  top: 0%;
+  left: 53%;
+  transform: translate(-53%, 12%);
+  z-index: 1;
   pointer-events: none;
 }
-header .menu_block {
+header .header_menu_block {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -25,7 +28,7 @@ header .menu_block {
   gap: 40px;
   margin-bottom: 120px;
 }
-header .menu_block .button_block {
+header .header_menu_block .button_block {
   width: 281px;
   height: 58px;
   display: flex;
@@ -33,7 +36,7 @@ header .menu_block .button_block {
   align-items: center;
   gap: 20px;
 }
-header .menu_block .button_block .open_account {
+header .header_menu_block .button_block .open_account {
   width: 133px;
   height: 40px;
   padding: 10px;
@@ -52,42 +55,47 @@ header .menu_block .button_block .open_account {
 }
 header .header_block_wrapped {
   width: 100%;
-  height: 394px;
+  height: 574px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  z-index: 2;
+  overflow: hidden;
   margin-bottom: 120px;
 }
-header .header_block_wrapped .header_block {
+header .header_block_wrapped .header_wrapped_up_block {
   width: 100%;
-  height: 106px;
+  height: 296px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   gap: 40px;
 }
-header .header_block_wrapped .header_block h1 {
-  width: 100%;
+header .header_block_wrapped .header_wrapped_up_block .header_title {
+  width: 580px;
   font-family: "Prompt";
   font-size: 48px;
   line-height: 62px;
   color: #FFFFFF;
 }
-header .header_block_wrapped .header_block span {
+header .header_block_wrapped .header_wrapped_up_block .header_about {
+  width: 429px;
   font-family: "Roboto";
   font-weight: 400;
   font-size: 20px;
   line-height: 32px;
   letter-spacing: 0.15px;
   color: #919CA2;
+  text-align: start;
 }
-header .header_block_wrapped .header_block .start_now_button {
+header .header_block_wrapped .header_wrapped_up_block .trade_gold_button {
   width: 180px;
   height: 56px;
   border-radius: 8px;
   padding: 16px 0px 16px 0px;
-  background: #8A24F3;
+  background: #F0A719;
   font-family: "Roboto";
   font-weight: 500;
   font-size: 16px;
@@ -98,115 +106,172 @@ header .header_block_wrapped .header_block .start_now_button {
   cursor: pointer;
   border: none;
 }
-header .vector_block {
+header .header_block_wrapped .header_wrapped_down_block {
+  width: 1180px;
+  height: 100px;
+  padding: 32px;
+  border-radius: 32px;
+  background: #1F1C10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+header .header_block_wrapped .header_wrapped_down_block .wrapped_down_vector_block {
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+header .header_block_wrapped .header_wrapped_down_block .wrapped_down_vector_block .about_vector {
+  width: auto;
+  font-family: "Prompt";
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+  color: #FFFFFF;
+}
+header .line_block {
   width: 100%;
-  height: 494px;
-  background: #252F3C;
+  height: 444px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
-  border-radius: 24px 24px 0px 0px;
+  position: relative;
+  gap: 60px;
   margin-bottom: 120px;
 }
-header .vector_block .up_block {
-  padding: 32px;
-  height: 154px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
+header .line_block::before {
+  position: absolute;
+  background: url("../../assets/ellipse.png") center/cover no-repeat;
+  width: 2120px;
+  height: 1179px;
+  content: "";
+  top: -210%;
+  left: -38%;
+  transform: rotate(0deg);
+  z-index: 1;
+  pointer-events: none;
 }
-header .vector_block .up_block .up_div {
-  display: flex;
-  align-items: center;
-  gap: 20px;
+header .line_block::after {
+  position: absolute;
+  background: url("../../assets/ellipse.png") center/cover no-repeat;
+  width: 2120px;
+  height: 1179px;
+  content: "";
+  top: 85%;
+  left: -47%;
+  transform: rotate(40deg);
+  z-index: 1;
+  pointer-events: none;
 }
-header .vector_block .up_block .up_div span {
-  font-family: "Prompt";
-  font-weight: 500;
-  font-size: 36px;
-  line-height: 44px;
-  color: #FFFFFF;
-}
-header .vector_block .up_block .up_div2 {
+header .line_block .line_up_block {
+  height: 96px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  gap: 20px;
 }
-header .vector_block .up_block .up_div2 .exchange_result {
+header .line_block .line_up_block .line_up_block_title {
+  width: 780px;
+  height: 52px;
   font-family: "Prompt";
   font-weight: 500;
-  font-size: 36px;
-  line-height: 44px;
+  font-size: 40px;
+  line-height: 52px;
+  text-align: center;
   color: #FFFFFF;
 }
-header .vector_block .up_block .up_div2 .currency {
+header .line_block .line_up_block .line_up_block_about {
+  height: 24px;
   font-family: "Roboto";
   font-weight: 400;
-  font-size: 20px;
-  line-height: 32px;
-  letter-spacing: 0.15px;
-  color: #919CA2;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.25px;
+  text-align: center;
+  color: #D9DEE2;
 }
-header .vector_block .down_block {
-  width: 100%;
-  height: 340px;
+header .line_block .line_mid_block {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background: #1E2732;
+  align-items: center;
+  gap: 20px;
 }
-header .vector_block .down_block .chat_area_block {
+header .line_block .line_mid_block .mid_block_div {
+  height: 172px;
+  border-radius: 32px;
+  border: 1px;
   padding: 32px;
   display: flex;
-  justify-content: space-between;
-  align-items: baseline;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%), linear-gradient(241.16deg, #1F1C10 3.83%, #503D0B 47.84%, #1F1C10 96.7%);
 }
-header .vector_block .down_block .chat_area_block .chat_area {
+header .line_block .line_mid_block .mid_block_div .mid_block_div_investment {
+  margin-right: auto;
   font-family: "Prompt";
   font-weight: 500;
-  font-size: 20px;
-  line-height: 28px;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
   color: #FFFFFF;
 }
-header .vector_block .down_block .chat_area_block .day {
+header .line_block .line_mid_block .mid_block_div .mid_block_div_profit {
+  font-family: "Prompt";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #FFFFFF;
+}
+header .line_block .line_mid_block .mid_block_div .mid_block_div_money {
+  width: 276px;
+  height: 62px;
+  font-family: "Prompt";
+  font-weight: 500;
+  font-size: 64px;
+  line-height: 76px;
+  text-align: center;
+  color: #FFFFFF;
+}
+header .line_block .start_trading_now_button {
+  width: 180px;
   height: 56px;
-  border-radius: 12px;
-  border: 1px solid #8A24F3;
-  padding: 16px 36px 12px 36px;
-  font-family: "Prompt";
+  border-radius: 8px;
+  padding: 16px 0px 16px 0px;
+  background: #F0A719;
+  font-family: "Roboto";
   font-weight: 500;
-  font-size: 20px;
-  line-height: 28px;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  text-align: center;
   color: #FFFFFF;
-}
-header .vector_block .time_block {
-  padding: 32px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-header .vector_block .time_block .time_block_div {
-  display: flex;
-  flex-direction: column;
-}
-header .vector_block .time_block .time_block_div .time {
-  font-family: "Roboto";
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 32px;
-  letter-spacing: 0.15px;
-  color: #FFFFFF;
-}
-header .vector_block .time_block .time_block_div .date {
-  font-family: "Roboto";
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 32px;
-  letter-spacing: 0.15px;
-  color: #919CA2;
+  cursor: pointer;
+  border: none;
 }
 
+@media screen and (max-width: 1660px) {
+  header {
+    position: relative;
+  }
+  header::after {
+    position: absolute;
+    background: url("../../assets/background.png") center/cover no-repeat;
+    width: 855px;
+    height: 632px;
+    content: "";
+    top: 0;
+    left: 80%;
+    transform: translate(-80%, 11.5%);
+    z-index: 1;
+  }
+}
 @media screen and (max-width: 767px) {
   header {
     padding-top: 16px;
@@ -217,26 +282,36 @@ header .vector_block .time_block .time_block_div .date {
     align-items: center;
   }
   header::after {
-    display: none;
-    width: 0;
-    height: 0;
+    position: absolute;
+    background: url("../../assets/mobile_background.png") center/cover no-repeat;
+    width: 360px;
+    height: 380px;
+    content: "";
+    top: 34%;
+    left: 50%;
+    transform: translate(-50%, -34%);
+    z-index: 1;
+    pointer-events: none;
   }
-  header .menu_block {
-    width: 100%;
+  header .header_menu_block {
+    width: 328px;
     align-items: center;
-    padding: 0 16px 0 16px;
+    justify-content: space-between;
+    padding: 0;
     gap: 12px;
-    margin-bottom: 40px;
+    margin: 0;
   }
-  header .menu_block .button_block {
-    width: 281px;
+  header .header_menu_block .button_block {
+    width: 133px;
     height: 58px;
-    display: flex;
     justify-content: flex-end;
     align-items: center;
     gap: 0;
   }
-  header .menu_block .button_block .open_account {
+  header .header_menu_block .button_block img {
+    transform: translateY(0px);
+  }
+  header .header_menu_block .button_block .open_account {
     width: 133px;
     height: 40px;
     border-radius: 6px;
@@ -253,43 +328,50 @@ header .vector_block .time_block .time_block_div .date {
     padding: 0px 4px 0px 4px;
     cursor: pointer;
   }
-  header .header_block {
-    width: 100%;
-    height: 108px;
-    padding: 0 16px 0 16px;
+  header .header_block_wrapped {
+    width: 360px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+    overflow: hidden;
+    margin-bottom: 40px;
+  }
+  header .header_block_wrapped .header_wrapped_up_block {
+    width: 328px;
+    height: 296px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 20px;
+    gap: 40px;
+    margin-bottom: 300px;
   }
-  header .header_block h1 {
-    width: 100%;
+  header .header_block_wrapped .header_wrapped_up_block .header_title {
+    width: 328px;
     font-family: "Prompt";
-    font-size: 32px;
-    line-height: 40px;
+    font-size: 48px;
+    line-height: 62px;
     color: #FFFFFF;
-    align-self: start;
   }
-  header .header_block span {
-    width: 100%;
-    height: 48px;
+  header .header_block_wrapped .header_wrapped_up_block .header_about {
+    width: 328px;
     font-family: "Roboto";
     font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: 0.25px;
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: 0.15px;
     color: #919CA2;
     text-align: start;
-    margin: 0;
-    padding: 0;
   }
-  header .header_block .start_now_button {
+  header .header_block_wrapped .header_wrapped_up_block .trade_gold_button {
     width: 180px;
     height: 56px;
     border-radius: 8px;
     padding: 16px 0px 16px 0px;
-    background: #8A24F3;
+    background: #F0A719;
     font-family: "Roboto";
     font-weight: 500;
     font-size: 16px;
@@ -300,106 +382,107 @@ header .vector_block .time_block .time_block_div .date {
     cursor: pointer;
     border: none;
   }
-  header .background {
-    transform: translateY(-20%);
-    pointer-events: none;
-    height: 400px;
-    margin-bottom: 40px;
-  }
-  header .background img {
-    pointer-events: none;
-  }
-  header .vector_block {
+  header .header_block_wrapped .header_wrapped_down_block {
     width: 328px;
-    height: 432px;
-    background: #252F3C;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    border-radius: 24px 24px 24px 24px;
-    margin-bottom: 40px;
-    overflow: hidden;
-    z-index: 1;
-    margin-bottom: 40px;
-  }
-  header .vector_block .up_block {
-    height: 92px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    height: 150px;
+    border-radius: 20px;
+    background: #1F1C10;
     padding: 16px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
   }
-  header .vector_block .up_block .up_div {
+  header .header_block_wrapped .header_wrapped_down_block .wrapped_down_vector_block {
+    width: 130px;
+    height: 48px;
     display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  header .vector_block .up_block .up_div img {
+    align-items: baseline;
+    justify-content: center;
+    gap: 12px;
+    padding: 0;
     margin: 0;
-    transform: translateY(0) !important;
   }
-  header .vector_block .up_block .up_div span {
-    font-family: "Prompt";
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 32px;
-    color: #FFFFFF;
+  header .header_block_wrapped .header_wrapped_down_block .wrapped_down_vector_block img {
+    margin: 0;
   }
-  header .vector_block .up_block .up_div2 {
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  header .vector_block .up_block .up_div2 .exchange_result {
-    font-family: "Prompt";
-    font-weight: 500;
-    font-size: 28px;
-    line-height: 40px;
-    color: #FFFFFF;
-  }
-  header .vector_block .up_block .up_div2 .currency {
-    font-family: "Roboto";
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
-    letter-spacing: 0.4px;
-    color: #919CA2;
-  }
-  header .vector_block .down_block {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background: #1E2732;
-    overflow: hidden;
-  }
-  header .vector_block .down_block .chat_area_block {
-    margin-top: 40px;
-    height: 46px;
-    padding: 32px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  header .vector_block .down_block .chat_area_block .chat_area {
+  header .header_block_wrapped .header_wrapped_down_block .wrapped_down_vector_block .about_vector {
+    width: 102px;
+    height: 48px;
     font-family: "Prompt";
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
     color: #FFFFFF;
+    align-self: start;
   }
-  header .vector_block .down_block .chat_area_block .day {
-    width: 85px;
-    height: 46px;
+  header .line_block {
+    width: 328px;
+    height: 542px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    border-radius: 12px;
-    border: 1px solid #8A24F3;
-    padding: 12px 20px 10px 20px;
+    justify-content: center;
+    position: relative;
+    margin: 0;
   }
-  header .vector_block .down_block .chat_area_block .day span {
+  header .line_block::before {
+    display: none;
+  }
+  header .line_block::after {
+    display: none;
+  }
+  header .line_block .line_up_block {
+    height: 96px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  header .line_block .line_up_block .line_up_block_title {
+    width: 328px;
+    height: 80px;
+    font-family: "Prompt";
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 40px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+  header .line_block .line_up_block .line_up_block_about {
+    width: 328px;
+    height: 48px;
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.25px;
+    text-align: center;
+    color: #D9DEE2;
+  }
+  header .line_block .line_mid_block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  header .line_block .line_mid_block .mid_block_div {
+    width: 328px;
+    height: 130px;
+    border-radius: 24px;
+    border: 1px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%), linear-gradient(241.16deg, #1F1C10 3.83%, #503D0B 47.84%, #1F1C10 96.7%);
+  }
+  header .line_block .line_mid_block .mid_block_div .mid_block_div_investment {
+    transform: translateX(-10%);
+    margin-right: auto;
     font-family: "Prompt";
     font-weight: 500;
     font-size: 16px;
@@ -407,31 +490,25 @@ header .vector_block .time_block .time_block_div .date {
     text-align: center;
     color: #FFFFFF;
   }
-  header .vector_block .time_block {
-    padding: 32px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  header .vector_block .time_block .time_block_div {
-    display: flex;
-    flex-direction: column;
-  }
-  header .vector_block .time_block .time_block_div .time {
-    font-family: "Roboto";
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
-    letter-spacing: 0.4px;
+  header .line_block .line_mid_block .mid_block_div .mid_block_div_profit {
+    transform: translateY(50%);
+    height: 24px;
+    font-family: "Prompt";
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
     color: #FFFFFF;
   }
-  header .vector_block .time_block .time_block_div .date {
-    font-family: "Roboto";
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
-    letter-spacing: 0.4px;
-    color: #919CA2;
+  header .line_block .line_mid_block .mid_block_div .mid_block_div_money {
+    width: 211px;
+    height: 62px;
+    font-family: "Prompt";
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 76px;
+    text-align: center;
+    color: #FFFFFF;
   }
 }
 
