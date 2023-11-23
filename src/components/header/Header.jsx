@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import s from './Header.module.scss'
 import Logo from "./logo/Logo";
 import {useMediaQuery} from "react-responsive";
@@ -17,11 +17,11 @@ const Header = () => {
     }
 
     const [sliderValue, setSliderValue] = useState(250);
-    const [profit, setProfit] = useState()
+    const [profit, setProfit] = useState(312)
     const handleChange = (e) => {
         const value = parseInt(e.target.value, 10);
         setSliderValue(value);
-        setProfit(value * 1.25)
+        setProfit(Math.floor(value * 1.25))
     };
 
     const calculateBackgroundColor = () => {
